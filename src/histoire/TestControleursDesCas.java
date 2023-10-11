@@ -1,54 +1,46 @@
 package histoire;
 
-import controleur.ControlAcheterProduit;
-import controleur.ControlAfficherMarche;
 import controleur.ControlAfficherVillage;
 import controleur.ControlEmmenager;
-import controleur.ControlLibererEtal;
-import controleur.ControlPrendreEtal;
-import controleur.ControlTrouverEtalVendeur;
 import controleur.ControlVerifierIdentite;
 import personnages.Chef;
 import personnages.Gaulois;
-import villagegaulois.Etal;
 import villagegaulois.Village;
 
 public class TestControleursDesCas {
 	public static void main(String[] args) {
 
-		//TODO decommenter les cas au fur et a mesure que vous avancez dans le TP
-		
+		// TODO decommenter les cas au fur et a mesure que vous avancez dans le TP
+
 		Village village = new Village("le village des irréductibles", 10, 5);
 		Chef abraracourcix = new Chef("Abraracourcix", 10, village);
 		village.setChef(abraracourcix);
 		Gaulois asterix = new Gaulois("Asterix", 6);
 		Gaulois obelix = new Gaulois("Obelix", 12);
 
-		ControlAfficherVillage controlAfficherVillage = new ControlAfficherVillage(
-				village);
+		ControlAfficherVillage controlAfficherVillage = new ControlAfficherVillage(village);
 
 		// Cas 2 : Emmenager
 
-//		System.out.println("Cas 2 : Emmenager");
-//		ControlEmmenager controlEmmenager = new ControlEmmenager(village);
-//		controlEmmenager.ajouterDuide("Panoramix", 10, 5, 7);
-//		controlEmmenager.ajouterGaulois("Asterix", 6);
-//		controlEmmenager.ajouterGaulois("Obelix", 12);
-//		String[] nomsVillageois = controlAfficherVillage.donnerNomsVillageois();
-//		System.out.println("Les villageois sont : ");
-//		for (String villageois : nomsVillageois) {
-//			System.out.println("- " + villageois);
-//		}
+		System.out.println("Cas 2 : Emmenager");
+		ControlEmmenager controlEmmenager = new ControlEmmenager(village);
+		controlEmmenager.ajouterDuide("Panoramix", 10, 5, 7);
+		controlEmmenager.ajouterGaulois("Asterix", 6);
+		controlEmmenager.ajouterGaulois("Obelix", 12);
+		String[] nomsVillageois = controlAfficherVillage.donnerNomsVillageois();
+		System.out.println("Les villageois sont : ");
+		for (String villageois : nomsVillageois) {
+			System.out.println("- " + villageois);
+		}
 
 		// Cas 3 : Verifier Identification
-//		System.out.println("///////////////////////////////");
-//		System.out.println("Cas 3 : Verifier Identification");
-//		ControlVerifierIdentite controlVerifierIdentite = new ControlVerifierIdentite(
-//				village);
-//		boolean vendeur = controlVerifierIdentite.verifierIdentite("Panoramix");
-//		System.out.println("Panoramix est un villageois ? " + vendeur);
-//		vendeur = controlVerifierIdentite.verifierIdentite("Intrus");
-//		System.out.println("Intrus est un villageois ? " + vendeur);
+		System.out.println("///////////////////////////////");
+		System.out.println("Cas 3 : Verifier Identification");
+		ControlVerifierIdentite controlVerifierIdentite = new ControlVerifierIdentite(village);
+		boolean vendeur = controlVerifierIdentite.verifierIdentite("Panoramix");
+		System.out.println("Panoramix est un villageois ? " + vendeur);
+		vendeur = controlVerifierIdentite.verifierIdentite("Intrus");
+		System.out.println("Intrus est un villageois ? " + vendeur);
 
 		// Cas 4 : Prendre etal
 
