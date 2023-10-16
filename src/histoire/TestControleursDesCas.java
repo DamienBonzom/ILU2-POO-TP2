@@ -3,9 +3,11 @@ package histoire;
 import controleur.ControlAfficherVillage;
 import controleur.ControlEmmenager;
 import controleur.ControlPrendreEtal;
+import controleur.ControlTrouverEtalVendeur;
 import controleur.ControlVerifierIdentite;
 import personnages.Chef;
 import personnages.Gaulois;
+import villagegaulois.Etal;
 import villagegaulois.Village;
 
 public class TestControleursDesCas {
@@ -53,26 +55,23 @@ public class TestControleursDesCas {
 
 		// Cas 5 : trouverEtalVendeur
 
-//		System.out.println("///////////////////////////////");
-//		System.out.println("Cas 5 : trouver etal vendeur");
-//		ControlTrouverEtalVendeur controlTrouverEtalVendeur = new ControlTrouverEtalVendeur(
-//				village);
-//		Etal etalObelix = controlTrouverEtalVendeur
-//				.trouverEtalVendeur("Obelix");
-//		Etal etalIntrus = controlTrouverEtalVendeur
-//				.trouverEtalVendeur("Intrus");
-//		System.out.print("L'étal d'Obélix");
-//		if (etalObelix != null) {
-//			System.out.println(" est trouvé");
-//		} else {
-//			System.out.println(" n'est pas trouvé");
-//		}
-//		System.out.print("L'étal de Intrus");
-//		if (etalIntrus != null) {
-//			System.out.println(" est trouvé");
-//		} else {
-//			System.out.println(" n'est pas trouvé");
-//		}
+		System.out.println("///////////////////////////////");
+		System.out.println("Cas 5 : trouver etal vendeur");
+		ControlTrouverEtalVendeur controlTrouverEtalVendeur = new ControlTrouverEtalVendeur(village);
+		Etal etalObelix = controlTrouverEtalVendeur.trouverEtalVendeur("Obelix");
+		Etal etalIntrus = controlTrouverEtalVendeur.trouverEtalVendeur("Intrus");
+		System.out.print("L'étal d'Obélix");
+		if (etalObelix != null) {
+			System.out.println(" est trouvé");
+		} else {
+			System.out.println(" n'est pas trouvé");
+		}
+		System.out.print("L'étal de Intrus");
+		if (etalIntrus != null) {
+			System.out.println(" est trouvé");
+		} else {
+			System.out.println(" n'est pas trouvé");
+		}
 
 		// Cas 6 : libererEtal
 
