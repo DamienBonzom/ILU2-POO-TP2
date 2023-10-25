@@ -5,13 +5,13 @@ import villagegaulois.Etal;
 import villagegaulois.Village;
 
 public class ControlTrouverEtalVendeur {
-	private Village village;
+	private static Village village;
 
 	public ControlTrouverEtalVendeur(Village village) {
 		this.village = village;
 	}
 
-	public Etal trouverEtalVendeur(String nomVendeur) {
+	public static Etal trouverEtalVendeur(String nomVendeur) {
 		Etal etal = null;
 		Gaulois gaulois = village.trouverHabitant(nomVendeur);
 		if (gaulois != null) {
