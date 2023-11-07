@@ -40,7 +40,7 @@ public class BoundaryPrendreEtal {
 		StringBuilder questionProduit = new StringBuilder();
 		questionProduit.append("C'est parfait, il me reste un étal pour vous !\n");
 		questionProduit.append("Il me faudrait quelques renseignements :\n");
-		questionProduit.append("Quel produit souhaitez-vous cendre ?\n");
+		questionProduit.append("Quel produit souhaitez-vous vendre ?\n");
 		System.out.println(questionProduit.toString());
 		String produit = scan.nextLine();
 
@@ -53,6 +53,7 @@ public class BoundaryPrendreEtal {
 		if (numeroEtal != -1) {
 			StringBuilder installation = new StringBuilder();
 			installation.append(String.format("Le vendeur %s s'est installé à l'étal n°%d", nomVendeur, numeroEtal));
+			System.out.println(installation.toString());
 		}
 
 	}
