@@ -56,7 +56,7 @@ public class BoundaryAcheterProduit {
 					nom_vendeur_choisis));
 		} else if (quantite_achetee < quantite_demandee) {
 			resultat_achat.append(String.format(
-					"%s veut acheter %d %s, malheureusement %s n'en a plus que %d. %s achète tout le stock de %s.\n !",
+					"%s veut acheter %d %s, malheureusement %s n'en a plus que %d. %s achète tout le stock de %s.\n",
 					nomAcheteur, quantite_demandee, produit, nom_vendeur_choisis, quantite_achetee, nomAcheteur,
 					nom_vendeur_choisis));
 		} else {

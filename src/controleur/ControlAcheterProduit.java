@@ -30,6 +30,10 @@ public class ControlAcheterProduit {
 
 	public int acheterProduit(String nomVendeur, int quantite) {
 		Etal etalVendeur = village.rechercherEtal(village.trouverHabitant(nomVendeur));
-		return etalVendeur.acheterProduit(quantite);
+		if (etalVendeur != null) {
+			return etalVendeur.acheterProduit(quantite);
+		} else {
+			return 0;
+		}
 	}
 }

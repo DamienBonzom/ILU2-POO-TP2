@@ -3,7 +3,6 @@ package controleur;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.fail;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -69,7 +68,9 @@ class ControlPrendreEtalTest {
 
 	@Test
 	void testVerifierIdentite() {
-		fail("Not yet implemented");
+		assertFalse(control.verifierIdentite("habitant"));
+		controlEm.ajouterGaulois("habitant", 10);
+		assertTrue(control.verifierIdentite("habitant"));
 	}
 
 }
